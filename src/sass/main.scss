@@ -1,0 +1,33 @@
+// Modules
+@import "base";
+@import "modules/reset";
+@import "modules/textReset";
+@import "modules/list";
+@import "modules/utilities";
+
+// Layouts
+@import "layouts/grid";
+@import "layouts/flex";
+// Media screen
+@import "layouts/responsive";
+
+// Sections-pages
+@import "sections/nav";
+@import "sections/header";
+@import "sections/about";
+@import "sections/home";
+@import "sections/footer";
+
+//[sass compiler npm_command: ......npm run sass......]
+.container-fluid {
+  max-width: 100%;
+  min-height: auto;
+  margin: 0 auto;
+}
+
+.wrapper-outer {
+  max-width: 90%;
+  margin: auto;
+  height: auto;
+  padding: 3rem 1rem;
+}

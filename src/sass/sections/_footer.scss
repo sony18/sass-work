@@ -1,0 +1,11 @@
+// Footer style
+.footer {
+  max-width: 100%;
+  padding: 1rem 1.5rem;
+  background: $footer__bg;
+  text-align: center;
+}
+
+.footer__link {
+  color: set-text-color($footer__bg);
+}

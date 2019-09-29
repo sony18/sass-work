@@ -1,0 +1,56 @@
+$text__family--sans: "Helvetica Neue", sans-serif;
+$text__color--base: #333 !default;
+$text__color--light: #818181;
+$text__color--dark: #111;
+
+@mixin text(
+  $size,
+  $line,
+  $margin: 0,
+  $family: $text__family--sans,
+  $color: $text__color--base,
+  $weight: normal
+) 
+{
+  font-size: em($size);
+  line-height: ($line/$size);
+  font-family: $family;
+  color: $color;
+  margin-bottom: em($margin, $size);
+  font-weight: $weight;
+}
+
+html {
+  font-size: $base__font-size * 1px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  @include text($base__font-size, $base__line);
+  background: $color__silver;
+}
+
+h1 {
+  @include text(25, $base__line, $color: $color__blue--navy, $weight: bold);
+  padding: em(10);
+}
+
+h2 {
+  @include text(20, 28, $color: $color__blue--navy);
+  padding: em(10);
+}
+
+a {
+  text-decoration: none;
+  color: $color__blue;
+  transition: all 0.1s ease-in;
+}
+
+a:hover {
+  color: $color__silver;
+}
+
+p {
+  margin: 0;
+  padding: em(10);
+}

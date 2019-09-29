@@ -1,0 +1,28 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "node-sass": "^4.11.0",
+    "scss-compile": "^0.1.7"
+  },
+  "devDependencies": {
+    "homepage":"https://sony18.github.io/sass-work",
+    "@types/gulp": "^4.0.6",
+    "gh-pages": "^2.1.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch src/sass -o src/css",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "",
+  "license": "ISC"
+}

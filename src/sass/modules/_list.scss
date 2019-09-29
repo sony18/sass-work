@@ -1,0 +1,17 @@
+// list pading
+
+.list {
+  padding-left: em(20);
+}
+
+.list-style--none {
+  list-style-type: none;
+}
+
+.list__item {
+  margin-bottom: em(10);
+}
+
+.list__item--end {
+  margin-bottom: 0;
+}

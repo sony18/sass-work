@@ -1,0 +1,47 @@
+// Navbar rules
+.nav {
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+  min-height: auto;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.nav--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav__bg {
+  background: $nav__bg;
+}
+.nav__list {
+  list-style-type: none;
+  margin-right: 1.5rem;
+}
+.nav__link {
+  color: set-text-color($nav__bg);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.2rem;
+  transition: all 0.1s ease-in;
+}
+.nav__link--active {
+  color: $navlink__active;
+  font-weight: bold;
+}
+.nav__link:hover {
+  color: $nav__hover-color;
+}
+
+// Logo
+.nav__logo {
+  color: set-text-color($nav__bg);
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.2rem 0.2rem 1rem #fff;
+}

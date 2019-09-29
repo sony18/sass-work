@@ -1,0 +1,58 @@
+.home__specialised-area {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+#sample-photo {
+  padding-bottom: 50px;
+}
+
+// Home each flex item size
+#sample-photo__1,
+#sample-photo__2,
+#sample-photo__3,
+#sample-photo__4 {
+  flex-basis: 15%;
+}
+
+// Full width container-photo card section
+.sample-photo__container {
+  max-width: 100%;
+  padding: 3rem 0;
+  background: $color__blue--navy;
+  min-height: auto;
+  position: relative;
+}
+// Hompe page:sample-photo flex wrapper:move up
+.wrapper-inner {
+  max-width: 100%;
+  min-height: 100%;
+  margin: auto;
+}
+
+// sample photo section overlay(added through Java script)
+.sample-photo__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $header__overlay;
+}
+
+.home__wrapper-outer {
+  @extend .wrapper-outer;
+  background: rgba(0, 0, 0, 1);
+  color: $color__white !important;
+  padding: 5rem;
+}
+
+h2 {
+  color: white;
+}
+
+.home__text-wrapper > p {
+  text-transform: uppercase;
+}

@@ -1,0 +1,79 @@
+// use mixins.....define in base.scss file.
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background: red;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  @include radius(30px);
+  @include box-shadow(100px, 50px, 50px, white);
+  @include border-stroke(light, black);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  min-height: auto;
+  border: 1px solid grey;
+  margin: 1rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+.card:hover {
+  box-shadow: 1px 1px 20px white;
+}
+.card-title {
+  background: $color__grey;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.card-body {
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+.card-footer {
+  border-top: 1px solid grey;
+  text-align: center;
+  // background: $color__blue--navy;
+  color: $color__white;
+  line-height: 0.2rem;
+}
+
+// Buttons
+// border mixin takes2 para value of lightness & color
+.btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: $color__grey--dark;
+  color: set-text-color($color__grey--dark);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $color__mix;
+  }
+}
+
+.btn--block {
+  display: block;
+}
+
+.btn--red {
+  background: $color__red;
+  color: set-text-color($color__red);
+  &:hover {
+    background: $color__mix;
+  }
+}
+.btn--blue {
+  background: $color__blue;
+  color: set-text-color($color__blue);
+  &:hover {
+    background: $color__mix;
+  }
+}

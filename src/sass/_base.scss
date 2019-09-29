@@ -1,0 +1,146 @@
+// variables
+//Block__Element--modifier (BEM)
+// assign variable only if it has not already been asigned
+$color__red: #c10000 !default;
+$color__red--dark: #990000 !default;
+$color__mix: linear-gradient(45deg, #00ff90cc, rgba(0, 225, 255, 1)) !default;
+$color__overlay: rgba(0, 0, 0,.5) !default;
+
+$color__gradient: linear-gradient(30deg, red, blue) !default;
+$color__white: #fff !default;
+$color__silver: #eceaea;
+$color__black: #000 !default;
+
+$color__blue: #3790d4 !default;
+$color__blue--navy: #063768;
+
+$color__green: #00d084;
+$color__green--light: #3ec08c;
+$color__green--dark: #035303;
+
+$color__yellow: yellow !default;
+$color__grey: #817e7e !default;
+$color__grey--light: #c2bebe !default;
+$color__grey--dark: #494848 !default;
+
+// MODIFY COLOR for web page sections
+$nav__bg: $color__green !default;
+$nav__hover-color: $color__silver !default;
+$navlink__active: $color__yellow !default;
+$footer__bg: $color__blue--navy !default;
+$header__overlay: $color__overlay !default;
+$base__font-size: 16 !default;
+$base__line: 25 !default;
+
+// functions to convert px to em
+@function em($px, $base: $base__font-size) {
+  @return ($px / $base) * 1em; //formula to convert px to em
+}
+
+// Text-color-setting based on bg darkness
+@function set-text-color($color) {
+  @if (lightness($color) >60) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin easeOut {
+  transition: all 0.7s ease;
+}
+
+// box shadow mixins.....    // mixins....example
+
+@mixin box-shadow($x, $y, $z, $color) {
+  -webkit-box-shadow: $x, $y, $z, $color;
+  -moz-box-shadow: $x, $y, $z, $color;
+  -ms-box-shadow: $x, $y, $z, $color;
+  box-shadow: $x, $y, $z, $color;
+}
+
+@mixin radius($x) {
+  -webkit-border-radius: $x;
+  -moz-border-radius: $x;
+  -ms-border-radius: $x;
+  border-radius: $x;
+}
+// Color change
+@mixin alert($text) {
+  @if $text == "danger" {
+    color: red;
+  } @else if $text == "success" {
+    color: yellow;
+  } @else {
+    color: black;
+  }
+}
+// Make bold
+@mixin bold($x) {
+  @if $x==true {
+    font-weight: 700;
+  }
+}
+// It should create 5 classes called .text-1 to .text-5 where each has a
+// font-size set to 10px multiplied by the index.
+@for $i from 1 to 6 {
+  .bg#{$i} {
+    background: $i;
+  }
+}
+
+@mixin set-bg($color) {
+  @if$color == blue {
+    background: $color__blue;
+  } @else if $colore == green {
+    background: green;
+  } @else {
+    background: inherit;
+  }
+}
+
+@mixin border-stroke($val, $color) {
+  @if $val==light {
+    border: em(1.5) solid $color;
+  } @else if $val==medium {
+    border: em(3) solid $color;
+  } @else if $val==heavy {
+    border: em(6) solid $color;
+  } @else {
+    border: none;
+  }
+}
+
+// through in for directive include all 1 to end i.e 12
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100%/12 * $i;
+  }
+}
+
+//   a @for directive that takes a variable $j that goes from 1 to 6.
+//   It should create 5 classes called .text-1 to .text-5 where each has a font-size set to 10px multiplied by the index.
+// to in for directive exclude last num i.e,6 below
+@for $j from 1 to 6 {
+  .text-#{$j} {
+    font-size: 10px * $j;
+  }
+}
+
+// Sass map................
+//create .$color-bg class
+//map to $color in var $colors
+$colors: (
+  color1: red,
+  color2: blue,
+  color3: green,
+  color4: grey,
+  color5: white,
+  color6: black
+);
+// required @key to map color value
+@each $key, $color in $colors {
+  .bg-#{$color} {
+    background: $color;
+  }
+}

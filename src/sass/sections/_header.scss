@@ -1,0 +1,51 @@
+// Header image containersize
+.header {
+  width: 100vw;
+  height: 80vh;
+}
+// Header overlay style
+.header__overlay {
+  width: 100vw;
+  height: 80vh;
+  position: absolute;
+  background: $header__overlay;
+}
+.header__img {
+  background: $color__blue url(../image/mobile.jpeg) no-repeat center center /
+    cover;
+  width: 100vw;
+  height: 80vh;
+  margin: 0 auto;
+  margin-bottom: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__figcaption {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// Header Button
+.header__btn {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: $color__grey--dark;
+  color: set-text-color($color__grey--dark);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+
+  &:hover {
+    background: $color__mix;
+  }
+}
+
+.header__btn--blue {
+  background: $color__blue--navy;
+  color: set-text-color($color__blue);
+  &:hover {
+    background: $color__mix;
+  }
+}

@@ -1,0 +1,42 @@
+// Grid lay out align item center verticlly horizontally
+.d-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 20px;
+}
+
+// Grid - autosize on diff screen size
+.d-grid__auto-placement {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+// Grid- allocation with column size..
+.d-grid__allocation {
+  grid-template-columns: 2fr 1fr;
+}
+
+//Main content layout:
+// Grid - specify column placement
+.d-grid__placement {
+  grid-template-columns: repeat (4, minmax(200px, 1fr));
+}
+
+// home page article
+.grid__item-1 {
+  grid-column: 1/3;
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 4px grey;
+}
+.grid__item-2 {
+  background: white;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 4px grey;
+  grid-column: 3/4;
+}
+
+//home page: phosto card
+.sample-photo__col {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
