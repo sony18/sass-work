@@ -8,7 +8,7 @@ const navbar = document.querySelector('.nav');
 const navbarOffset = navbar.offsetTop;
 
 // Fix nav bar function
-function navbarFix() {
+ navbarFix = () => {
     if (window.scrollY >= navbarOffset) {
         navbar.classList.add('nav__bg');
         navbar.classList.add('nav--fixed');
@@ -20,18 +20,18 @@ function navbarFix() {
 
 
 // Add overlay on home page sample-photo section
-function addOverlay() {
+addOverlay = ()=> {
     console.log('enter')
     overlay_div.classList.add('sample-photo__overlay');
 }
 // Remove overlay on home page sample-photo section
-function removeOverlay() {
+removeOverlay = ()=> {
     console.log('leave')
     overlay_div.classList.remove('sample-photo__overlay');
 }
 
 // remove active class item in nav list
-function removeClass() {
+removeClass = ()=> {
     return nav_a.forEach(item =>
         item.classList.remove('nav__link--active')
     )
@@ -39,13 +39,13 @@ function removeClass() {
 }
 
 // Function to remove & add active class
-function addNavActive(e) {
+addNavActive = e => {
     console.log(e.target)
     removeClass();
     e.target.classList.add('nav__link--active');
 }
 
-// Event listener for scroll
+// Event listener............. for scroll
 window.addEventListener('scroll', navbarFix)
 
 // For add overlay on hover effect
