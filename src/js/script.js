@@ -8,7 +8,7 @@ const navbar = document.querySelector('.nav');
 const navbarOffset = navbar.offsetTop;
 
 // Fix nav bar function
- navbarFix = () => {
+ const navbarFix = () => {
     if (window.scrollY >= navbarOffset) {
         navbar.classList.add('nav__bg');
         navbar.classList.add('nav--fixed');
@@ -20,12 +20,12 @@ const navbarOffset = navbar.offsetTop;
 
 
 // Add overlay on home page sample-photo section
-addOverlay = ()=> {
+const addOverlay = ()=> {
     console.log('enter')
     overlay_div.classList.add('sample-photo__overlay');
 }
 // Remove overlay on home page sample-photo section
-removeOverlay = ()=> {
+const removeOverlay = ()=> {
     console.log('leave')
     overlay_div.classList.remove('sample-photo__overlay');
 }
@@ -39,7 +39,7 @@ removeClass = ()=> {
 }
 
 // Function to remove & add active class
-addNavActive = e => {
+const addNavActive = e => {
     console.log(e.target)
     removeClass();
     e.target.classList.add('nav__link--active');
